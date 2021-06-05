@@ -1,7 +1,6 @@
 
 FROM    alpine:latest
-RUN     apk add python3
-RUN     apk add py3-pip
+RUN     apk add --no-cache python3 py3-pip
 RUN     pip install starlette uvicorn
 COPY    test.py .
 EXPOSE  8000/tcp
